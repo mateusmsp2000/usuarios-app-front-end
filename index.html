@@ -1,0 +1,118 @@
+<script src="config.js"></script>
+<script src="main.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    .splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      display: none; 
+    }
+
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db; 
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<div id="editModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+  <div style="background: white; padding: 20px; border-radius: 5px;">
+    <h2>Editar Usuário</h2>
+    <label for="editPrimeiroNome">Primeiro Nome:</label>
+    <input type="text" id="editPrimeiroNome" required>
+    
+    <label for="editUltimoNome">Último Nome:</label>
+    <input type="text" id="editUltimoNome" required>
+    
+    <label for="editEmail">Email:</label>
+    <input type="email" id="editEmail" required>
+    
+    <label for="editTelefone">Telefone:</label>
+    <input type="text" id="editTelefone" required>
+
+    <label for="editCidade">Cidade:</label>
+    <input type="text" id="editCidade" required>
+
+    <label for="editPais">País:</label>
+    <input type="text" id="editPais" required>
+
+    <label for="editGenero">Gênero:</label>
+    <select id="editGenero" required>
+      <option value="">Selecione um gênero</option>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+      <option value="outro">Outro</option>
+    </select>
+
+    <button onclick="saveUser()">Salvar</button>
+    <button onclick="closeModal()">Cancelar</button>
+  </div>
+</div>
+
+<body>
+  <div class="splash">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <span>Cadastro de Usuários</span>
+      <button onclick="addUsuarioAleatorio()" id="new">Incluir usuário aleatório</button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Cidade</th>
+            <th>País</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div id="contador" style="margin-top: 10px;">Total de usuários: 0</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
