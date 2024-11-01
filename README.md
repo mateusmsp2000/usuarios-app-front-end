@@ -1,17 +1,23 @@
 # Usuarios-App-Front-End
 
-## Prefácio
-O intuito dessa aplicação é comunicar com a api Usuarios-App do link: https://github.com/mateusmsp2000/usuarios-app e exibir os usuários cadastrados em uma grid, permitindo assim realizar operações de CRUD.
+### Prefácio
 
-## Funcionalidades
-* Cadastro de usuário automaticamente (Dados auto gerados da api pública Random User).
-* Edição de usuário.
-* Remoção de usuário.
-* Litsagem de relatório de usuários.
+O objetivo desta aplicação é se comunicar com a API [Usuarios-App](https://github.com/mateusmsp2000/usuarios-app) e exibir os usuários cadastrados em uma grade, permitindo operações de CRUD (criação, leitura, atualização e exclusão).
 
-## Pré requisitos para rodar a aplicação
-* Possuir extensão live server.
-* Rodar a aplicação na porta 5500
+### Funcionalidades
 
-## Para rodar a aplicação com vs-code:
-* Clicar com botão direito sobre a página index.html e clicar em "Open With Live Server", e a aplicação estará disponível em http://localhost:5500
+- **Cadastro automático de usuários** (com dados gerados automaticamente da API pública Random User).
+- **Edição de usuário**.
+- **Remoção de usuário**.
+- **Listagem de relatório de usuários**.
+
+### Pré-requisitos para executar a aplicação
+
+- Extensão **Live Server** instalada no VS Code.
+- Configuração para rodar a aplicação na porta **5500**.
+
+### Instruções para rodar a aplicação com VS Code
+
+1. Clique com o botão direito na página `index.html`.
+2. Selecione **"Open With Live Server"**.
+3. A aplicação estará disponível em [http://localhost:5500](http://localhost:5500).
